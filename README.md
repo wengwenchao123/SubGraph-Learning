@@ -11,7 +11,7 @@ Please refer to the `README` file in each model framework for instructions on se
 
 ## How to Use the SGL Method  
 We have embedded the parameters for the SGL method into the model's parameters:  
-- In `DDGCRN-main` and `GMAN`, the related parameter settings are in the `config_file`.  
+- In `DDGCRN-main`、`DGCNet-main` and `GMAN`, the related parameter settings are in the `config_file`.  
 - In `STAEformer`, the related parameter settings are in `model/STAEformer.yaml`.  
 - In `STWave`, the related parameter settings are in `baselines/STWave/PEMS0X.py`.  
 
