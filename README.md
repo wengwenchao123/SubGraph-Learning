@@ -1,5 +1,7 @@
 # Let's Group: A Plug-and-Play SubGraph Learning Method for Memory-Efficient Spatio-Temporal Graph Modeling
 
+![Local Image](picture/finalv3.jpg "This is a local image")
+
 ## Module  
 The SubGraph Learning method is located in the `SGL module` folder.
 
