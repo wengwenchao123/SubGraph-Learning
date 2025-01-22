@@ -22,9 +22,12 @@ To disable the SGL method, set `use_subgraph` to `False`.
 The parameters `memory_node` and `topk` control the number of subgraphs and the number of nodes in each subgraph, respectively.
 
 ## Dataset
-The relevant datasets can be downloaded from Google Drive:  
-[Dataset Link](https://drive.google.com/file/d/1xEoy-mwHeql5Ew_mmdQMGn34019iI-4I/view?usp=sharing).
+The relevant datasets can be downloaded from [Google Drive](https://drive.google.com/file/d/1xEoy-mwHeql5Ew_mmdQMGn34019iI-4I/view?usp=sharing).  
+The files are already named according to the models. To use a dataset, simply place the corresponding files into the appropriate framework folder.
 
-The files are named according to the corresponding models. To use a dataset, simply place the corresponding file in the appropriate model framework folder.  
-For example:
-- In `DDGCRN` and `DGCNet`, move the `data` folder from `data_DDGCRN_DGCNet` into the directory of each model.
+- For `DDGCRN` and `DGCNet`, move the `data` folder inside `data_DDGCRN_DGCNet` to the root directory of both models.  
+- For `GMAN`, move the `data` folder inside `data_GMAN` to the root directory of `GMAN`.  
+- For `DGCRN`, move the `data` folder inside `data_DGCRN` to the root directory of `DGCRN-main`.  
+- For `STAEformer`, move the `data` folder inside `data_STAEformer` to the root directory of `STAEformer-main`.  
+- For `STWave`, move the `data` folder inside `data_STWave` to the root directory of `STWave`.
+
