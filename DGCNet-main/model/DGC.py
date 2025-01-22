@@ -19,12 +19,10 @@ class nodeselection(nn.Module):
 
         supports2 = torch.softmax(torch.matmul(nodevec2, nodevec1.transpose(-2, -1)), dim=-1)
 
-        # 子图和对应节点索引生成部分
         values, indices = supports2.topk(self.K, dim=-1, largest=True, sorted=True)
 
         batch_indices = torch.arange(nodevec1.size(0),device=nodevec1.device).unsqueeze(-1).unsqueeze(-1).expand(-1, indices.size(1),
                                                                                    indices.size(2))#.cuda()
-        # 这是得到的记忆网络的topk索引对应节点提取到的特征
         selected_nodes_features = nodevec1[batch_indices, indices]
         return selected_nodes_features, batch_indices, indices
 
@@ -35,7 +33,6 @@ class feature_aggregation(nn.Module):
         self.K = K
         self.N = N
 
-    #无原始节点版本
     def forward(self,x, adj, batch_indices, indices):
         B,N,D = x.shape
 
