@@ -21,5 +21,10 @@ We have embedded the parameters for the SGL method into the model's parameters:
 To disable the SGL method, set `use_subgraph` to `False`.  
 The parameters `memory_node` and `topk` control the number of subgraphs and the number of nodes in each subgraph, respectively.
 
-## Dataset  
-The related datasets can be downloaded using the links provided under each model framework.
+## Dataset
+The relevant datasets can be downloaded from Google Drive:  
+[Dataset Link](https://drive.google.com/file/d/1xEoy-mwHeql5Ew_mmdQMGn34019iI-4I/view?usp=sharing).
+
+The files are named according to the corresponding models. To use a dataset, simply place the corresponding file in the appropriate model framework folder.  
+For example:
+- In `DDGCRN` and `DGCNet`, move the `data` folder from `data_DDGCRN_DGCNet` into the directory of each model.
