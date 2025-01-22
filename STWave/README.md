@@ -66,7 +66,9 @@ You can find detailed tutorials in [Getting Started](./tutorial/getting_started.
 
 For detailed instructions, please refer to the [Getting Started](./tutorial/getting_started.md) tutorial.
 
-
+## How to Run STWave
+Run STWave using the `STWave/experiments/train.py` file.  
+The parameters for each dataset can be modified in the series of files located under `baselines/STWave/PEMS0X.py`.
 
 
 
