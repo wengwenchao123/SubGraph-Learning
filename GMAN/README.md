@@ -1,6 +1,6 @@
-# [Pattern Recognition] Decomposition Dynamic Graph Conolutional Recurrent Network for Traffic Forecasting  
+# Gman: A graph multi-attention network for traffic prediction
 
-This is a PyTorch implementation of Decomposition Dynamic Graph Conolutional Recurrent Network for Traffic Forecasting
+This is a PyTorch implementation of Gman: A graph multi-attention network for traffic prediction
 
 ## Table of Contents
 
