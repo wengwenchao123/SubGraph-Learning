@@ -1,12 +1,6 @@
-## Pattern-Matching Dynamic Memory Network for Dual-Mode Traffic Prediction
+## DGCNet
 
-This is a PyTorch implementation of **[Pattern-Matching Dynamic Memory Network for Dual-Mode Traffic Prediction](https://arxiv.org/abs/2408.07100)**
-
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pattern-matching-dynamic-memory-network-for-1/traffic-prediction-on-pemsd7-l)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-l?p=pattern-matching-dynamic-memory-network-for-1)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pattern-matching-dynamic-memory-network-for-1/traffic-prediction-on-pemsd8)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd8?p=pattern-matching-dynamic-memory-network-for-1)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pattern-matching-dynamic-memory-network-for-1/traffic-prediction-on-pemsd7)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7?p=pattern-matching-dynamic-memory-network-for-1)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pattern-matching-dynamic-memory-network-for-1/traffic-prediction-on-pemsd7-m)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd7-m?p=pattern-matching-dynamic-memory-network-for-1)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/pattern-matching-dynamic-memory-network-for-1/traffic-prediction-on-pemsd4)](https://paperswithcode.com/sota/traffic-prediction-on-pemsd4?p=pattern-matching-dynamic-memory-network-for-1)
+This is a PyTorch implementation of **DGCNet**
 
 ## Table of Contents
 
@@ -34,12 +28,12 @@ python run.py --datasets {DATASET_NAME} --type {MODEL_TYPE} --mode {MODE_NAME}
 ```
 Replace `{DATASET_NAME}` with one of datasets.
 
-such as `python run.py --dataset NYC-Taxi16 `
+such as `python run.py --dataset PEMSD8 `
 
 To run PM-DMNet with the desired configuration, set the `type` parameter accordingly:
 
-- Set `type P` to run PM-DMNet(P).
-- Set `type R` to run PM-DMNet(R).
+- Set `type P` to run DGCNet(P).
+- Set `type R` to run DGCNet(R).
 
 There are two options for `{MODE_NAME}` : `train` and `test`
 
