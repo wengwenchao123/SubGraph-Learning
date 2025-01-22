@@ -62,34 +62,6 @@ You can find detailed tutorials in [Getting Started](./tutorial/getting_started.
 > 🔥🔥🔥 ***The paper has been accepted by IEEE TKDE! You can check it out [here](https://arxiv.org/abs/2310.06119).***  🔥🔥🔥
 
 
-## ✨ Highlighted Features
-
-### Fair Performance Review
-
-Users can compare the performance of different models on arbitrary datasets fairly and exhaustively based on a unified and comprehensive pipeline.
-
-### Developing with BasicTS
-
-<details>
-  <summary><b>Minimum Code</b></summary>
-Users only need to implement key codes such as model architecture and data pre/post-processing to build their own deep learning projects.
-</details>
-
-<details>
-  <summary><b>Everything Based on Config</b></summary>
-Users can control all the details of the pipeline through a config file, such as the hyperparameter of dataloaders, optimization, and other tricks (*e.g.*, curriculum learning). 
-</details>
-
-<details>
-  <summary><b>Support All Devices</b></summary>
-BasicTS supports CPU, GPU and GPU distributed training (both single node multiple GPUs and multiple nodes) thanks to using EasyTorch as the backend. Users can use it by setting parameters without modifying any code.
-</details>
-
-<details>
-  <summary><b>Save Training Log</b></summary>
-Support `logging` log system and `Tensorboard`, and encapsulate it as a unified interface, users can save customized training logs by calling simple interfaces.
-</details>
-
 ## 🚀 Installation and Quick Start
 
 For detailed instructions, please refer to the [Getting Started](./tutorial/getting_started.md) tutorial.
