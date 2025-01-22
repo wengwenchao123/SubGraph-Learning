@@ -29,5 +29,5 @@ The files are already named according to the models. To use a dataset, simply pl
 - For `GMAN`, move the `data` folder inside `data_GMAN` to the root directory of `GMAN`.  
 - For `DGCRN`, move the `data` folder inside `data_DGCRN` to the root directory of `DGCRN-main`.  
 - For `STAEformer`, move the `data` folder inside `data_STAEformer` to the root directory of `STAEformer-main`.  
-- For `STWave`, move the `data` folder inside `data_STWave` to the root directory of `STWave`.
+- For `STWave`, move the `datasets` folder inside `data_STWave` to the root directory of `STWave`.
 
