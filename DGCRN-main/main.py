@@ -27,16 +27,16 @@ def set_seed(seed):
 # --dataset SD --device cuda:0 --years 2019 --model_name dgcrn --seed 2023 --bs 64 --tpd 96
 # --dataset GBA --device cuda:3 --years 2019 --model_name dgcrn --seed 2023 --bs 16 --tpd 96 --topk 250 --memory_node 10
 # --dataset PEMS08 --device cuda:0 --model_name dgcrn --seed 2023 --bs 64 --tpd 288
-def get_config():  #一些基础的参数的设置写在utils/args.py里面
+def get_config(): 
     parser = get_public_config()
     parser.add_argument('--gcn_depth', type=int, default=2)
     parser.add_argument('--rnn_size', type=int, default=64)
     parser.add_argument('--hyperGNN_dim', type=int, default=16)
     parser.add_argument('--node_dim', type=int, default=40)
     parser.add_argument('--tanhalpha', type=int, default=3)
-    parser.add_argument('--cl_decay_step', type=int, default=2500)  #教师学习的步数
-    parser.add_argument('--step_size', type=int, default=1000)   #这是多少item后预测步数+1
-    parser.add_argument('--tpd', type=int, default=288) #这个应该是指时间间隔，用于这里的DGCRN来换算decoder的时间的
+    parser.add_argument('--cl_decay_step', type=int, default=2500)  
+    parser.add_argument('--step_size', type=int, default=1000)   
+    parser.add_argument('--tpd', type=int, default=288) 
     parser.add_argument('--use_subgraph', type=eval, default=True)
     parser.add_argument('--topk', type=int, default=60)
     parser.add_argument('--memory_node', type=int, default=4)
