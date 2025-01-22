@@ -15,7 +15,8 @@ Please refer to the `README` file in each model framework for instructions on se
 We have embedded the parameters for the SGL method into the model's parameters:  
 - In `DDGCRN-main`、`DGCNet-main` and `GMAN`, the related parameter settings are in the `config_file`.  
 - In `STAEformer`, the related parameter settings are in `model/STAEformer.yaml`.  
-- In `STWave`, the related parameter settings are in `baselines/STWave/PEMS0X.py`.  
+- In `STWave`, the related parameter settings are in `baselines/STWave/PEMS0X.py`.
+- In `DGCRN-main`, the settings are in `main.py`.
 
 To disable the SGL method, set `use_subgraph` to `False`.  
 The parameters `memory_node` and `topk` control the number of subgraphs and the number of nodes in each subgraph, respectively.
