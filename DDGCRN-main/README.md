@@ -49,7 +49,3 @@ Selecting `train` will retrain the model and save the trained model parameters a
 With `test` selected, run.py will import the trained model parameters from `{DATASET_NAME}.pth` in the `pre-trained` folder.
 
 
-## More Related Works
-
-- [[Neural Networks] RGDAN: A random graph diffusion attention network for traffic prediction](https://doi.org/10.1016/j.neunet.2023.106093)
-
