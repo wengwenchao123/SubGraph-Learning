@@ -1,6 +1,6 @@
 ## STAEformer: Spatio-Temporal Adaptive Embedding Transformer
 
-This is a PyTorch implementation of **STAEformer: Spatio-Temporal Adaptive Embedding Transformer**. We have embedded STSGL into STAEformer. Please follow the relevant guidelines to run the code.
+This is a PyTorch implementation of **STAEformer: Spatio-Temporal Adaptive Embedding Transformer**. We have embedded SGL into STAEformer. Please follow the relevant guidelines to run the code.
 
 
 #### Required Packages
