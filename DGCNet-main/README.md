@@ -1,6 +1,6 @@
 ## DGCNet
 
-This is a PyTorch implementation of **DGCNet**. We have embedded STSGL into DGCNet. Please follow the relevant guidelines to run the code.
+This is a PyTorch implementation of **DGCNet**. We have embedded SGL into DGCNet. Please follow the relevant guidelines to run the code.
 
 ## Table of Contents
 
