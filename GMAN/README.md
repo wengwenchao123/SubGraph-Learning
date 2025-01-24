@@ -1,6 +1,6 @@
 # Gman: A graph multi-attention network for traffic prediction
 
-This is a PyTorch implementation of Gman: A graph multi-attention network for traffic prediction. We have embedded STSGL into GMAN. Please follow the relevant guidelines to run the code.
+This is a PyTorch implementation of Gman: A graph multi-attention network for traffic prediction. We have embedded SGL into GMAN. Please follow the relevant guidelines to run the code.
 
 ## Table of Contents
 
