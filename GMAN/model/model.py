@@ -39,43 +39,20 @@ class nodeselection(nn.Module):
 
         nodevec2 = node_feature[1]
         nodevec3 = torch.cat((nodevec1, nodevec2), -1)
-        # nodevec4 = torch.mul(torch.cat((node_embeddings[0], node_embeddings[1]), -1).unsqueeze(-2),
-        #                      self.node_embeddings)
-        nodevec4 = self.node_embeddings
 
-        # nodevec4 = torch.mul(node_embeddings[1].unsqueeze(-2), filter2)  # [B,N,dim_in]
+        nodevec4 = self.node_embeddings
 
         supports2 = torch.softmax(torch.matmul(nodevec4, nodevec3.transpose(-2, -1)), dim=-1)
 
-        # 子图和对应节点索引生成部分
         values, indices = supports2.topk(self.K, dim=-1, largest=True, sorted=True)
-
-        # batch_indices =
-        # batch_indices = torch.cuda.FloatTensor(batch_indices) if torch.cuda.is_available() else torch.FloatTensor(batch_indices)
-        # torch.randn(shape, out=batch_indices)
-
-
-        # batch_indices = torch.arange(nodevec1.size(0), device=nodevec1.device).unsqueeze(-1).unsqueeze(-1).unsqueeze(-1).expand(-1,
-        #                                                                                                           indices.size(
-        #                                                                                                               1),
-        #                                                                                                           indices.size(
-        #                                                                                                               2),
-        #                                                                                                           indices.size(
-        #                                                                                                               3))  # .cuda()
 
         batch_indices = torch.arange(nodevec1.size(0), device=nodevec1.device).view(B, 1, 1, 1).expand(-1, T,
                                                                                                        self.memory_num,
                                                                                                        self.K)
-        # B, T, N, D = nodevec1.shape
-        # _, _, K, M = indices.shape
+
 
         time_indices = torch.arange(T, device=nodevec1.device).view(1, T, 1, 1).expand(B, -1, self.memory_num,
                                                                                            self.K)
-        # selected_nodes_features = nodevec1[
-        #     batch_indices, torch.arange(T, device=nodevec1.device).view(1, T, 1, 1).expand(batch_size, -1, K,
-        #                                                                                    M), indices]
-
-        # selected_nodes_features = nodevec1[batch_indices, time_indices, indices]
 
         selected_nodes_features1 = nodevec1[batch_indices, time_indices, indices]
         selected_nodes_features2 = nodevec2[batch_indices, time_indices, indices]
@@ -89,7 +66,7 @@ class feature_aggregation(nn.Module):
         self.K = K
         self.N = N
 
-    # 无原始节点版本
+
     def forward(self, x, adj, batch_indices, time_indices, indices):
         B, T, N, D = x.shape
         _, _, M, K =indices.shape
@@ -99,26 +76,23 @@ class feature_aggregation(nn.Module):
         selected_nodes = x[batch_indices, time_indices, indices]
         node_new = torch.matmul(adj, selected_nodes).reshape(B, T, self.K * self.N, D)
 
-        # 重塑indices1以匹配scatter_add_的需要
+
         indices_expanded = indices.unsqueeze(-1).expand(-1, -1, -1, -1, D).reshape(B, T, self.K * self.N, D)
         dict1 = torch.zeros(x.shape, device=x.device).clone()  # .cuda()
         dict1.scatter_add_(-2, indices_expanded, node_new)
 
         dict_refined = torch.ones((B, T, N), device=x.device) * 10 ** -14
-        # dict_refined = torch.zeros(B, N).cuda()
-        # dict_refined = torch.ones(B, N, requires_grad=True).cuda()
-        # 获取 indices1 的扁平版本和对应的批次索引
+
+
         flat_indices = indices.flatten()
         batch_indices1 = torch.arange(B*T, device=x.device).repeat_interleave(M*K)
             # indices.size(1) * indices.size(2))  # .cuda()
 
-        # 构建用于 scatter_add 的源张量，因为我们需要在每个索引处累加 1
+
         ones_source = torch.ones_like(flat_indices, device=x.device, dtype=dict_refined.dtype)  # .cuda()
 
-        # 使用 scatter_add 在正确的位置累加 1
-        # 由于 indices1 有重复的索引，我们需要先转换它们为线性索引
         linear_indices = flat_indices + batch_indices1 * N # N = dict_refined.size(-1)
-        # 得到的索引dict_refined
+
         dict_refined.put_(linear_indices, ones_source, accumulate=True)
 
         x1 = dict1 / dict_refined.unsqueeze(-1).expand(B, T, N, D)
