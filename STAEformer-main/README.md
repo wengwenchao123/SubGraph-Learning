@@ -1,19 +1,6 @@
 ## STAEformer: Spatio-Temporal Adaptive Embedding Transformer
 
-#### H. Liu*, Z. Dong*, R. Jiang#, J. Deng, J. Deng, Q. Chen, X. Song#, "Spatio-Temporal Adaptive Embedding Makes Vanilla Transformer SOTA for Traffic Forecasting", Proc. of 32nd ACM International Conference on Information and Knowledge Management (CIKM), 2023. (*Equal Contribution, #Corresponding Author)
-
-![model_arch](https://github.com/XDZhelheim/STAEformer/assets/57553691/f0620d5b-2b7f-47bc-bf76-5fccf48fae35)
-
-#### Citation
-```
-@inproceedings{liu2023spatio,
-  title={Spatio-temporal adaptive embedding makes vanilla transformer sota for traffic forecasting},
-  author={Liu, Hangchen and Dong, Zheng and Jiang, Renhe and Deng, Jiewen and Deng, Jinliang and Chen, Quanjun and Song, Xuan},
-  booktitle={Proceedings of the 32nd ACM International Conference on Information and Knowledge Management},
-  pages={4125--4129},
-  year={2023}
-}
-```
+This is a PyTorch implementation of **STAEformer: Spatio-Temporal Adaptive Embedding Transformer**. We have embedded STSGL into STAEformer. Please follow the relevant guidelines to run the code.
 
 
 #### Required Packages
