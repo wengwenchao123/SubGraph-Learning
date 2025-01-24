@@ -1,4 +1,4 @@
-# Let's Group: A Plug-and-Play SubGraph Learning Method for Memory-Efficient Spatio-Temporal Graph Modeling
+# Let's Group: A Plug-and-Play Spatio-Temporal SubGraph Learning Method for Memory-Efficient Spatio-Temporal Graph Modeling
 
 ![Local Image](picture/finalv3.jpg "This is a local image")
 
@@ -6,7 +6,7 @@
 The SubGraph Learning method is located in the `SGL module` folder.
 
 ## Model  
-We have integrated the SubGraph Learning method into the code frameworks of models such as `DDGCRN-main` to ensure fair comparisons.
+We have integrated the Spatio-Temporal SubGraph Learning method into the code frameworks of models such as `DDGCRN-main` to ensure fair comparisons.
 
 ## Running the Model  
 Please refer to the `README` file in each model framework for instructions on setting up the environment and running the models.
