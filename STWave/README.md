@@ -41,7 +41,7 @@
 
 This is the official repository of BasicTS, which includes the STWave model.  
 
-We have embedded STSGL into STWave. Please follow the guidelines provided in BasicTS to set up the environment and run the code.
+We have embedded SGL into STWave. Please follow the guidelines provided in BasicTS to set up the environment and run the code.
 
 
 ## 🚀 Installation and Quick Start
