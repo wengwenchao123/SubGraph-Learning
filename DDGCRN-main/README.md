@@ -2,7 +2,7 @@
 
 This is a PyTorch implementation of Decomposition Dynamic Graph Conolutional Recurrent Network for Traffic Forecasting.
 
-We have embedded STSGL into DDGCRN. Please follow the relevant guidelines to run the code.
+We have embedded SGL into DDGCRN. Please follow the relevant guidelines to run the code.
 
 
 
