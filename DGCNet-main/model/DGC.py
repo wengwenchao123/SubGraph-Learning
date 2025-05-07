@@ -4,7 +4,6 @@ import torch.nn as nn
 import numpy as np
 from collections import OrderedDict
 import math
-import torch_scatter
 
 class nodeselection(nn.Module):
     def __init__(self, topk, memory_node, time_dim):
