@@ -1,4 +1,4 @@
-# Let's Group: A Plug-and-Play SubGraph Learning Method for Memory-Efficient Spatio-Temporal Graph Modeling
+# [IJCAI2025] Let's Group: A Plug-and-Play SubGraph Learning Method for Memory-Efficient Spatio-Temporal Graph Modeling
 
 ![Local Image](picture/finalv3.jpg "This is a local image")
 
